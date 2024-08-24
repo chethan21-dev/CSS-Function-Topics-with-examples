@@ -1,0 +1,412 @@
+1. CSS attr() Function - 
+The attr() function returns the value of an attribute of the selected elements.
+Syntax : attr(attribute-name)
+Example : 
+<html>
+<head>
+<style>
+a:after {content: " (" attr(href) ")";}
+</style>
+</head>
+<body>
+<h1>The attr() Function</h1>
+<p>Insert the value of the href attribute in parenthesis after each link:</p>
+<p><a href="https://www.google.com">Go to Google</a></p>
+<p><a href="https://www.instagram.com/profile/">Go to instagram' HTML tutorial</a></p>
+</body>
+</html>
+
+2. CSS calc() Function - 
+calc() function performs a calculation to be used as the property value.
+Syntax : calc(expression)
+Example : 
+<html>
+<head>
+<style>
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>The calc() Function</h1>
+<div id="div1">text...</div>
+</body>
+</html>
+
+3. CSS conic-gradient() Function - 
+A. conic-gradient() function sets a conic gradient as the background image.
+B. A conic gradient is a gradient with color transitions rotated around a center point.
+C. To create a conic gradient you must define at least two color stops.
+Syntax : background-image: conic-gradient([from angle] [at position,] color degree, color degree, ...); 
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green);
+}
+</style>
+</head>
+<body>
+<h1>Here Conic Gradient - Three Colors</h1>
+<div id="grad1"></div>
+</body>
+</html>
+
+4. CSS counter() Function - 
+The counter() function returns the current value of the named counter, as a string.
+Syntax : counter(countername, counterstyle)
+Example : 
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+<h1>Using CSS Counters:</h1>
+<h2>CSS</h2>
+<h2>Text</h2>
+<h2>Text 1</h2>
+</body>
+</html>
+
+5. CSS cubic-bezier() Function - 
+A. cubic-bezier() function defines a Cubic Bezier curve.
+B. A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+C. The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property. 
+Syntax : cubic-bezier(x1,y1,x2,y2)
+Example : 
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+div:hover {
+  width:300px;
+}
+</style>
+</head>
+<body>
+<h1>The cubic-bezier() Function</h1>
+<p>Hover over the div element below, for the transistion effect.</p>
+<div></div>
+</body>
+</html>
+
+6. CSS hsl() Function - 
+A. hsl() function define colors using the Hue-saturation-lightness model (HSL).
+B. HSL stands for hue, saturation, and lightness - and represents a cylindrical-coordinate representation of colors.
+Syntax : hsl(hue, saturation, lightness)
+Example : 
+<html>
+<head>
+<style>
+#p1 {background-color:hsl(120,100%,50%);}
+#p2 {background-color:hsl(120,100%,75%);}
+#p3 {background-color:hsl(120,100%,25%);}
+#p4 {background-color:hsl(120,60%,70%);}
+#p5 {background-color:hsl(290,100%,50%);}
+#p6 {background-color:hsl(290,60%,70%);}
+</style>
+</head>
+<body>
+<h1>CSS hsl() Function</h1>
+<p>HSL colors:</p>
+<p id="p1">Green</p>
+<p id="p2">Light green</p>
+<p id="p3">Dark green</p>
+<p id="p4">Pastel green</p>
+<p id="p5">Violet</p>
+<p id="p6">Pastel violet</p>
+</body>
+</html>
+
+7. CSS hsla() Function - 
+A. hsla() function define colors using the Hue-saturation-lightness-alpha model (HSLA).
+B. HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the color.
+Syntax : hsla(hue, saturation, lightness, alpha)
+Example : 
+<html>
+<head>
+<style>
+#p1 {background-color:hsla(120,100%,50%,0.3);}
+#p2 {background-color:hsla(120,100%,75%,0.3);}
+#p3 {background-color:hsla(120,100%,25%,0.3);}
+#p4 {background-color:hsla(120,60%,70%,0.3);}
+#p5 {background-color:hsla(290,100%,50%,0.3);}
+#p6 {background-color:hsla(290,60%,70%,0.3);}
+</style>
+</head>
+<body>
+<h1>It is like hsla() Function</h1>
+<p>HSL colors with opacity:</p>
+<p id="p1">Green</p>
+<p id="p2">Light green</p>
+<p id="p3">Dark green</p>
+<p id="p4">Pastel green</p>
+<p id="p5">Violet</p>
+<p id="p6">Pastel violet</p>
+</body>
+</html>
+
+8. CSS linear-gradient() Function - 
+A. linear-gradient() function sets a linear gradient as the background image.
+B. To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+Syntax : background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  background-image: linear-gradient(red, yellow, blue);
+}
+</style>
+</head>
+<body>
+<h3>This one is Linear Gradient - Top to Bottom</h3>
+<p>This linear gradient starts at the top. It starts red, transitioning to yellow, then to blue:</p>
+<div id="grad1"></div>
+</body>
+</html>
+
+9. CSS max() Function - 
+max() function uses the largest value, from a comma-separated list of values, as the property value.
+Syntax : max(value1, value2, ...)
+Example : 
+<html>
+<head>
+<style>
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: max(50%, 300px);
+}
+</style>
+</head>
+<body>
+<h1>The max() Function</h1>
+<p>Use max() to set the width of #div1 to whichever value is largest, 50% or 300px:</p>
+<div id="div1">Some text...</div>
+<p>Resize the browser window to see the effect.</p>
+</body>
+</html>
+
+10. CSS min() Function - 
+min() function uses the smallest value, from a comma-separated list of values, as the property value.
+Syntax : min(value1, value2, ...)
+Example : 
+<html>
+<head>
+<style>
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: min(50%, 300px);
+}
+</style>
+</head>
+<body>
+<h1>This is min() Function</h1>
+<p>Use min() to set the width of #div1 to whichever value is smallest, 50% or 300px:</p>
+<div id="div1">text...</div>
+<p>Resize the browser window to see the effect.</p>
+</body>
+</html>
+
+11. CSS radial-gradient() Function - 
+A. radial-gradient() function sets a radial gradient as the background image.
+B. A radial gradient is defined by its center.
+C. To create a radial gradient you must define at least two color stops.
+Syntax : background-image: radial-gradient(shape size at position, start-color, ..., last-color); 
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 150px;
+  width: 200px;
+  background-image: radial-gradient(red, green, blue);
+}
+</style>
+</head>
+<body>
+<h3>This is called Radial Gradient - Evenly Spaced Color Stops</h3>
+<div id="grad1"></div>
+</body>
+</html>
+
+12. CSS repeating-conic-gradient() Function - 
+A. repeating-conic-gradient() function is used to repeat conic gradients.
+Syntax : background-image: repeating-conic-gradient([from angle] [at position,] color degree, color degree, ...); 
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-conic-gradient(red 10%, yellow 20%);
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<h1>This is known as Repeating Conic Gradient</h1>
+<div id="grad1"></div>
+</body>
+</html>
+
+13. CSS repeating-linear-gradient() Function -
+A. The numbers in the table specify the first browser version that fully supports the function.
+B. Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+Syntax : background-image: repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...); 
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+</style>
+</head>
+<body>
+<h3>This is known as Repeating Linear Gradient</h3>
+<div id="grad1"></div>
+</body>
+</html> 
+
+14. CSS repeating-radial-gradient() Function - 
+repeating-radial-gradient() function is used to repeat radial gradients.
+Syntax : background-image: repeating-radial-gradient(shape size at position, start-color, ..., last-color); 
+Example : 
+<html>
+<head>
+<style>
+#grad1 {
+  height: 200px;
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+</style>
+</head>
+<body>
+<h3>Here it is called Repeating Radial Gradient</h3>
+<div id="grad1"></div>
+</body>
+</html>
+
+15. CSS rgb() Function -
+A. rgb() function define colors using the Red-green-blue (RGB) model.
+B. An RGB color value is specified with: rgb(red, green, blue). Each parameter defines the intensity of that color and can be an integer between 0 and 255 or a percentage value (from 0% to 100%).
+C. For example, the rgb(0,0,255) value is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.
+Syntax : rgb(red, green, blue)
+Example : 
+<html>
+<head>
+<style>
+#p1 {background-color:rgb(255,0,0);}
+#p2 {background-color:rgb(0,255,0);}
+#p3 {background-color:rgb(0,0,255);}
+#p4 {background-color:rgb(192,192,192);}
+#p5 {background-color:rgb(255,255,0);}
+#p6 {background-color:rgb(255,0,255);}
+</style>
+</head>
+<body>
+<h1>The rgb() Function</h1>
+<p>The RGB colors:</p>
+<p id="p1">Red</p>
+<p id="p2">Green</p>
+<p id="p3">Blue</p>
+<p id="p4">Grey</p>
+<p id="p5">Yellow</p>
+<p id="p6">Cerise</p>
+</body>
+</html>
+
+16. CSS rgba() Function -
+A. rgba() function define colors using the Red-green-blue-alpha (RGBA) model.
+B. RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the color.
+Syntax : rgba(red, green, blue, alpha)
+Example : 
+<html>
+<head>
+<style>
+#p1 {background-color:rgba(255,0,0,0.3);}
+#p2 {background-color:rgba(0,255,0,0.3);}
+#p3 {background-color:rgba(0,0,255,0.3);}
+#p4 {background-color:rgba(192,192,192,0.3);}
+#p5 {background-color:rgba(255,255,0,0.3);}
+#p6 {background-color:rgba(255,0,255,0.3);}
+</style>
+</head>
+<body>
+<h1>This one is know as rgba() Function</h1>
+<p>RGB colors with opacity:</p>
+<p id="p1">Red</p>
+<p id="p2">Green</p>
+<p id="p3">Blue</p>
+<p id="p4">Grey</p>
+<p id="p5">Yellow</p>
+<p id="p6">Cerise</p>
+</body>
+</html>
+
+17. CSS var() Function - 
+var() function is used to insert the value of a CSS variable.
+Syntax : var(--name, value)
+Example : 
+<html>
+<head>
+<style>
+:root {
+  --main-bg-color: coral;  
+}
+#div1 {
+  background-color: var(--main-bg-color);
+  padding: 5px;  
+}
+#div2 {
+  background-color: var(--main-bg-color);
+  padding: 5px;
+}
+#div3 {
+  background-color: var(--main-bg-color);
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+<h1>The var() Function</h1>
+<div id="div1">Text 1.</div>
+<br>
+<div id="div2">Text 2.</div>
+<br>
+<div id="div3">Text 3.</div>
+</body>
+</html>
